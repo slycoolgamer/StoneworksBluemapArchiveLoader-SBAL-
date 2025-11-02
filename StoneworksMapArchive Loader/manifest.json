@@ -1,0 +1,16 @@
+{
+  "name": "Stoneworks Map Fix(Archive Loader)",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": ["https://map.stoneworks.gg/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["archive/markers.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
