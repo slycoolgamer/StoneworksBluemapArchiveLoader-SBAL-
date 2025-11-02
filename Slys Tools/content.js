@@ -9,14 +9,14 @@ function injectImageOverlay() {
   const overlay = document.createElement('img');
   overlay.id = 'slys-tools-overlay';
   overlay.src = chrome.runtime.getURL('icons/label.png'); // Change this to your image path
-  
+
   // Style the overlay
   overlay.style.cssText = `
     position: fixed;
     bottom: 20px;
     left: 20px;
-    width: 600px;
-    height: 140px;
+    width: 90px;
+    height: 90px;
     z-index: 10000;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -33,10 +33,9 @@ function injectImageOverlay() {
     overlay.style.transform = 'scale(1)';
   });
 
-  // Optional: Click to open extension popup or perform action
+  // Click to open GitHub repository
   overlay.addEventListener('click', () => {
-    console.log('Slys Tools overlay clicked!');
-    // You could add functionality here
+    window.open('https://github.com/slycoolgamer/StoneworksBluemapArchiveLoader-SBAL-', '_blank');
   });
 
   // Inject into page
