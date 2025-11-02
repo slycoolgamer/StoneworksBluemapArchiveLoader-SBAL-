@@ -1,6 +1,6 @@
 {
   "name": "Stoneworks Map Fix (Archive Loader)",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "description": "Toggle redirect features for Stoneworks map (archive loader).",
   "permissions": [
@@ -15,9 +15,20 @@
     {
       "resources": [
         "archive/markers.json",
-        "archive/settings.json"
+        "archive/settings.json",
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png",
+        "icons/label.png"
       ],
       "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://map.stoneworks.gg/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ],
   "background": {
