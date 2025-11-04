@@ -2,6 +2,8 @@
 This extention fixes the bluemap by replacing the broken markers.json with a old local copy!
 Waiting for the map to come back online to download a new markers.json from the website
 ![enter image description here](https://i.postimg.cc/NG8VcQMQ/Screenshot-2025-11-04-2203e16.png)
+
+It loads markers onto the bluemap with an archive. and adds free-flight if you want more camera control in 3d mode
 ## **Load the Extension in Chrome**
 1. **Download the folder**
 *the folder containing the manifest.json*
